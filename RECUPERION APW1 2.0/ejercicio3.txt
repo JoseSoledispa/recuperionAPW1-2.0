@@ -1,0 +1,20 @@
+3. Crear una función JavaScript que reciba un número de cédula y calcule la sumatoria de estos números, mostrando cuántos números pares e impares hay. Poner el código en la respuesta Y enviar el enlace de GitLab al correo institucional patricia.quiroz@uleam.edu.ec *
+
+function contarParesImpares(cedula) {
+            var total = 0;
+            var pares = 0;
+            var impares = 0;
+            let arrayNumeros = Array.from(String(cedula), Number);
+            for (let i = 0; i < arrayNumeros.length; i++) {
+                total += arrayNumeros[i];
+                if (arrayNumeros[i] %2 == 0) {
+                    pares++;
+                } else {
+                    impares++;
+                }
+            }
+            console.log("La sumatoria de números es = " + total);
+            console.log("La cantidad de números pares es = " + pares);
+            console.log("La cantidad de números impares es = " + impares);
+        }
+        contarParesImpares(987654);
